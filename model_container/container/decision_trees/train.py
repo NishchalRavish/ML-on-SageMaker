@@ -64,3 +64,9 @@ def train():
         print('Exception during training: ' + str(e) + '\n' + trc, file=sys.stderr)
         # A non-zero exit code causes the training job to be marked as Failed.
         sys.exit(255)
+        
+if __name__ == '__main__':
+    train()
+
+    # A zero exit code causes the job to be marked a Succeeded.
+    sys.exit(0)
